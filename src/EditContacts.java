@@ -27,7 +27,6 @@ public class EditContacts implements MenuAction {
         Scanner scanner = new Scanner(System.in);
         int contactNumber = scanner.nextInt();
 
-        // Проверка на корректность ввода номера контакта
         if (contactNumber >= 1 && contactNumber <= contacts.size()) {
             Contact contact = contacts.get(contactNumber - 1);
             System.out.println("Ви вибрали контакт: " + contact.getName() + " " + contact.getPhoneNumber());
@@ -37,7 +36,6 @@ public class EditContacts implements MenuAction {
             System.out.print("Введіть новий номер телефону: ");
             String newPhoneNumber = scanner.nextLine();
 
-            // Обновление данных контакта
             contact.setName(newName);
             contact.setPhoneNumber(newPhoneNumber);
             System.out.println("Контакт успішно відредаговано");
